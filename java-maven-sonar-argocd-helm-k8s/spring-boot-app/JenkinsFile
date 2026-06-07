@@ -51,6 +51,14 @@ pipeline {
             GIT_USER_NAME = "Hari-dev-arch"
         }
         steps {
+             steps {
+        sh '''
+            echo "===== DEBUG ====="
+            pwd
+            ls -la
+            find . -name .git -type d
+            echo "================="
+        '''
             withCredentials([string(credentialsId: 'github', variable: 'GITHUB_TOKEN')]) {
                 sh '''
                     git config user.email "hariprabhu.rhp@gmail.com"
