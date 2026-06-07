@@ -50,8 +50,7 @@ pipeline {
             GIT_REPO_NAME = "Jenkins-Zero-To-Hero"
             GIT_USER_NAME = "Hari-dev-arch"
         }
-        steps {
-             steps {
+    steps {
         sh '''
             echo "===== DEBUG ====="
             pwd
